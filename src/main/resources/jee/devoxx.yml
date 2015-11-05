@@ -1,0 +1,4 @@
+name: "Devoxx Antwerp"
+
+server:
+  type: bridge
