@@ -4,6 +4,7 @@ import be.fluid_it.devoxx.quickie.dropwizard.config.DevoxxConfig;
 import be.fluid_it.devoxx.quickie.dropwizard.modules.DevoxxModule;
 import be.fluid_it.devoxx.quickie.dropwizard.resources.HelloResource;
 import be.fluid_it.devoxx.quickie.dropwizard.routes.DevoxxRoutes;
+import be.fluid_it.devoxx.quickie.dropwizard.util.Utilities;
 import be.fluid_it.µs.bundle.dropwizard.µService;
 import be.fluid_it.µs.bundle.dropwizard.µsBundle;
 import be.fluid_it.µs.bundle.dropwizard.µsEnvironment;
@@ -27,6 +28,7 @@ public class DevoxxService extends µService<DevoxxConfig> {
 
     @Override
     protected void run(DevoxxConfig configuration, Environment environment, µsEnvironment µsEnvironment) throws Exception {
+        Utilities.registerCorsFilter(environment);
         environment.jersey().register(HelloResource.class);
     }
 }
