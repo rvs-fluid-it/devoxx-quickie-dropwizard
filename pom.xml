@@ -117,11 +117,7 @@
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
             <configuration>
-              <mainClass>be.fluid_it.devoxx.quickie.dropwizard.service.DevoxxService</mainClass>
-              <arguments>
-                <argument>server</argument>
-                <argument>./src/main/config/service/devoxx.yml</argument>
-              </arguments>
+              <mainClass>be.fluid_it.devoxx.quickie.dropwizard.service.DevoxxServiceLauncher</mainClass>
             </configuration>
           </plugin>
         </plugins>
